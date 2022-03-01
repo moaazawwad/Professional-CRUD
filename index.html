@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="crud.css">
+</head>
+
+<body>
+<div class=" crud w-75 m-auto">
+
+    <div class="head   text-center p-2 m-3">
+        <h1 class="fw-bolder fs-2"> CRUD</h1>
+        <h2 class="h3 "> CREAT READ UPDAT SEARCH</h2>
+    </div>
+    <div class="inputs">
+    <input class=" border-0 my-1   w-100" type="text" placeholder="title" name="title" id="title">
+    <div class=  " my-1  d-flex" id="totalpriceinputs">
+        <input class=" w-100" type="number" placeholder="price" name="price" id="price">
+        <input class=" w-100" type="number" placeholder="taxes" name="taxes" id="taxes">
+        <input class=" w-100" type="number" placeholder="ads" name="ads" id="ads">
+        <input class=" w-100" type="number" placeholder="discount" name="discount" id="discount">
+<button class="btn-sm btn specialBtn  m" id="totalprice">   total </button>   
+ </div>
+    <input class=" my-1   w-100" type="text" placeholder="count" name="count" id="count">
+    <input class=" my-1 border-0   w-100" type="text" placeholder="category" name="category" id="category">
+<button    id="creat" class="my-1 btn btn-dark w-100 bg-gradient">creat</button>
+
+<input onkeyup="searchfinal(this.value)"  class="my-1  w-100 bg-gradient " type="search"placeholder="search" name="search" id="search">
+<div id="twobtnsearch" class=" d-flex justify-content-between">
+    <button onclick="typeofsearch(this.id)"  id="searchTitle" class="my-1  btn btn-dark w-100 bg-gradient"> search by title</button>
+    <button onclick="typeofsearch(this.id)"  id="searchCategory" class="my-1 btn btn-dark w-100 bg-gradient"> search by category</button>
+    
+    
+    
+</div>
+<button  id="deletAll" class=" btn btn-dark w-100 bg-gradient"> deletAll <span id="numOfAll" ></span></button>
+    
+    </div>
+    <div class="output">
+        <table class="table">
+            <thead>
+               >
+                    <th>ID</th>
+                    <th>TITLE</th>
+                    <th>PRICE</th>
+                    <th>TAXES</th>
+                    <th>ADS</th>
+                    <th>DISCOUNT</th>
+                    <th>COUNT </th>
+                    <th>CATEGORY</th>
+                    <th>UPDAT</th>
+                    <th>DELET</th>
+              <tbody id="ss">
+               
+              </tbody>
+            </thead>
+           
+        </table>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+    <script src="crud.js"></script>
+</body>
+
+
+</html>

@@ -1,0 +1,26 @@
+body{
+    background-color: rgb(48, 29, 29);
+    color: wheat;
+}
+li{
+    color: white;
+}
+
+::placeholder{
+color: black;
+}
+
+th{
+    color: white;
+}
+
+button{
+background-color: rgb(45, 59, 59) !important;
+}
+.specialBtn{
+    background-color: rgb(92, 86, 35) !important;
+
+}
+td{
+    color: wheat;
+}
